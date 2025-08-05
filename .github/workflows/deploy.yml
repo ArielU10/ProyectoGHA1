@@ -1,0 +1,30 @@
+# Archivo de configuración para GitHub Actions
+# Nombre del Workflow
+name: Deploy
+
+# Cuándo debe ejecutarse el workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Clonar el repositorio
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      # Paso 2: Imprimir un mensaje (puedes cambiar esto por otros pasos luego)
+      - name: Prueba de CI
+        run: echo "Hola, este es mi workflow de CI/CD"
+
+      # Paso 3: Puedes agregar pasos de test, build o despliegue aquí
+      - name: Otro paso de ejemplo
+        run: |
+          echo "Add other actions to build,"
+          echo "test, and deploy your project."

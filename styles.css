@@ -1,0 +1,89 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fuente general */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6dd5fa, #2980b9);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Encabezado */
+  header {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  /* Contenido principal */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .card ul {
+    list-style: none;
+  }
+  
+  .card ul li::before {
+    content: "👉";
+    margin-right: 0.5rem;
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+  }
+  
+  /* Animación */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
